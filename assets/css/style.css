@@ -1,0 +1,39 @@
+.header {
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    height: 150px;
+    width: 80%;
+    margin: 15px auto !important;
+}
+
+.row {
+    width: 80%;
+    margin: 15px auto !important;
+}
+
+.underscores {
+    border: 1px solid black;
+    font-size: 100px;
+    text-align: center;
+    height: 150px;
+    width: 80%;
+    margin: 15px auto;
+}
+
+#guessesleft {
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    margin: 15px auto;
+}
+#lettersguessed {
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    margin: 15px auto;
+}

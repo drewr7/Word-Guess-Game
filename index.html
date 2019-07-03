@@ -3,17 +3,29 @@
         <title>Hangman</title>
         <link rel="reset" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Hangman</h1>
-        <div class="container"></div>
-        <header>
-            <h1>Hangman: NFL Teams</h1>
-        </header>
-        <div class="underscores">_ _ _ _</div>
-        <div class="guessesremaining">Guesses Remaining</div>
-        <div class="wordsguessed">Words Guessed</div>
-
+           <div class="row header">
+             <img src="assets/images/nfl-logo.png" style="height:150px;width:100px;" class="col-2" >
+             <div class="col-8">
+                 <br>
+               <h1>Hangman: NFL Teams</h1>
+             </div>
+             <img src="assets/images/nfl-logo.png" style="height:150px;width:100px;" class="col-2" >
+           </div>
+                <div class="row" id="hangbody">
+                  <img src="assets/images/hangman.jpg" style="height:345px;width:200px" class="col-5 hang">
+                  <div class="col-7 bodyhang">
+                      <div class="row" id="guessesleft">
+                             Guesses Remaining
+                         </div>
+                         <div class="row" id="lettersguessed">
+                             Letters Guessed
+                     </div>
+                </div>
+            </div>
+        <div class="underscores">_ _ _ _ _</div>
     </body>
     <script src="assets/javascript/game.js"></script>
 </html>
