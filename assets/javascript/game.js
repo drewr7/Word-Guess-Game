@@ -38,7 +38,6 @@ docunderscore[0].innerHTML = underscore.join(' ');
 // checks to see if word matches guesses
 else if(underscore.join('') == choosenteam) {
 alert('You Win!');
-
 }
 
 else if (guessesremaining == 1) {
