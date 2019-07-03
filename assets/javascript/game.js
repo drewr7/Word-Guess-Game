@@ -7,6 +7,8 @@ var underscore = [];
 var rightword = [];
 var wrongword = [];
 
+var docunderscore = document.getElementsByClassName('underscore');
+
 //Create underscores based on team selected
 var generateunderscore = function() {
     for(i=0; i < choosenteam.length; i++){
@@ -15,7 +17,6 @@ var generateunderscore = function() {
     return underscore;
 } 
 
-console.log(generateunderscore());
 //Get users guess
 document.addEventListener('keypress', (event) => {
     var keycode = event.keyCode;
@@ -23,15 +24,22 @@ document.addEventListener('keypress', (event) => {
 // if user guess is correct
     if(choosenteam.indexOf(keyword) > -1) {
     rightword.push(keyword);
-    console.log(rightword);
+    docunderscore.innerHTML = underscore.join(' ');
+// replace underscore with right letter   
+    underscore[choosenteam.indexOf(keyword)] = keyword;
+    docunderscore[0].innerHTML = underscore.join(' ');
+// checks to see if word matches guesses
+    if(underscore.join('') == choosenteam) {
+        alert('You Win!');
     }
+}
     else{
     wrongword.push(keyword);
     console.log(wrongword)
     }
-})
-//Check if guess is right
 
-//If right replace letter with underscore
+})
+
+docunderscore[0].innerHTML = generateunderscore().join(' ');
 
 //If wrong add to letters guessed 
