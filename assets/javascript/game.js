@@ -5,9 +5,10 @@ var randnum = Math.floor(Math.random()* teams.length);
 var choosenteam = teams[randnum];
 var underscore = [];
 var rightword = [];
-var wrongword = [];
+var lettersguessed = [];
 
 var docunderscore = document.getElementsByClassName('underscore');
+var doclettersguessed = document.getElementById('lettersguessed');
 
 //Create underscores based on team selected
 var generateunderscore = function() {
@@ -34,8 +35,8 @@ document.addEventListener('keypress', (event) => {
     }
 }
     else{
-    wrongword.push(keyword);
-    console.log(wrongword)
+    lettersguessed.push(keyword);
+    doclettersguessed.innerHTML = lettersguessed.join(' ');
     }
 
 })
